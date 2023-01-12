@@ -55,41 +55,41 @@ Tenant.create([
   {
     name: 'Duncan',
     house_no: 01,
-    phone_no: +254123456789
+    phone_no: +254123456789,
     unit_type: "2 Bedroom",
-    date_in: 14/01/2020,
+    date_in: "07/05/2019",
     balance_due: 14700
   },
   {
     name: 'Michael',
     house_no: 02,
-    phone_no: +254123456789
+    phone_no: +254123456789,
     unit_type: "4 Bedroom",
-    date_in: 27/05/2019,
+    date_in: "27/5/2019",
     balance_due: 1700
   },
   {
     name: 'Valeria',
     house_no: 03,
-    phone_no: +254123456789
+    phone_no: +254123456789,
     unit_type: "4 Bedroom",
-    date_in: 09/05/2019,
+    date_in: "9/5/2019",
     balance_due: 3450
   },
   {
     name: 'Benson',
     house_no: 04,
-    phone_no: +254123456789
+    phone_no: +254123456789,
     unit_type: "5 Bedroom",
-    date_in: 17/08/2017,
+    date_in: "17/08/2017",
     balance_due: 44700
   },
   {
     name: 'Ashley',
     house_no: 05,
-    phone_no: +254123456789
+    phone_no: +254123456789,
     unit_type: "4 Bedroom",
-    date_in: 19/09/2021,
+    date_in: "19/09/2021",
     balance_due: 14
   }
 
