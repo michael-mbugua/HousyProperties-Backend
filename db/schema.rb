@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_12_130011) do
     t.integer "house_no"
     t.integer "phone_no"
     t.string "unit_type"
-    t.integer "date_in"
+    t.string "date_in"
     t.integer "balance_due"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
