@@ -13,6 +13,6 @@ class PaymentsController < ApplicationController
     end
     private
     def pay_params
-        params.permit(:Name,:HouseNo,:amount)
+        params.permit(:Name,:amount,:property_id)
     end
 end

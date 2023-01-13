@@ -31,7 +31,7 @@ class TenantsController < ApplicationController
       end
     
       def tenant_params
-        params.permit(:name,:house_no, :phone_no, :unit_type, :date_in, )
+        params.permit(:name,:house_no, :phone_no, :unit_type, :date_in,:property_id )
       end
 
 end
