@@ -7,7 +7,7 @@ class CreateTenants < ActiveRecord::Migration[7.0]
       t.string :unit_type
       t.string :date_in
       t.integer :balance_due
-
+      t.integer :property_id
       t.timestamps
     end
   end

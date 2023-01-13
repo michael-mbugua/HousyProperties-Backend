@@ -4,7 +4,12 @@ puts "Seeding data ..."
 # Owner seed data
 owner=Admin.create(Name:"Ellis",Phone:2547,Email:"ellis@gmail.com",Password:"Qr123")
 # complain seed data
-complain=Complain.create(Name:"phill",Phone:25436725,Email:"phillomen@gmail.com",HouseNo:1,HouseType:"Condo",complain:"there has been water leakage in my kitchen")
+complain=Housecomplain.create(Name:"Benson",Phone:2543,Email:"phillomen@gmail.com",HouseType:"Condo",complain:"there has been water leakage in my kitchen",property_id:1)
+complain=Housecomplain.create(Name:"valeria",Phone:2543,Email:"phillomen@gmail.com",HouseType:"Condo",complain:"the WIFI has been slow what's happening??!!",property_id:2)
+complain=Housecomplain.create(Name:"Duncan",Phone:2543,Email:"phillomen@gmail.com",HouseType:"Condo",complain:"there has been black out since yesterday fix that",property_id:3)
+complain=Housecomplain.create(Name:"James",Phone:2543,Email:"phillomen@gmail.com",HouseType:"Condo",complain:"The house next door plays loud music kindly check that",property_id:4)
+payments=Payment.create(Name:"john",amount:20000,property_id:2)
+payments=Payment.create(Name:"lorem",amount:25000,property_id:3)
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
@@ -63,42 +68,48 @@ Tenant.create([
   {
     name: 'Duncan',
     house_no: 01,
-    phone_no: +254123456789,
+    phone_no: 2541,
     unit_type: "2 Bedroom",
     date_in: "07/05/2019",
-    balance_due: 14700
+    balance_due: 14700,
+    property_id: 1
   },
   {
     name: 'Michael',
     house_no: 02,
-    phone_no: +254123456789,
+    phone_no: 2541,
     unit_type: "4 Bedroom",
     date_in: "27/5/2019",
-    balance_due: 1700
+    balance_due: 1700,
+    property_id: 3
   },
   {
     name: 'Valeria',
     house_no: 03,
-    phone_no: +254123456789,
+    phone_no: 25412,
     unit_type: "4 Bedroom",
     date_in: "9/5/2019",
-    balance_due: 3450
+    balance_due: 3450,
+    property_id: 2
   },
   {
     name: 'Benson',
     house_no: 04,
-    phone_no: +254123456789,
+    phone_no: 2541,
     unit_type: "5 Bedroom",
     date_in: "17/08/2017",
-    balance_due: 44700
+    balance_due: 44700,
+    property_id: 4
   },
   {
     name: 'Ashley',
     house_no: 05,
-    phone_no: +254123456789,
+    phone_no: 2541,
     unit_type: "4 Bedroom",
     date_in: "19/09/2021",
-    balance_due: 14
+    balance_due: 14,
+    property_id: 5
   }
 
 ])
+puts "Done seeding"

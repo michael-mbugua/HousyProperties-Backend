@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_12_150255) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_13_132946) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,13 +25,34 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_12_150255) do
 
   create_table "complains", force: :cascade do |t|
     t.string "Name"
-    t.string "Phone"
+    t.integer "Phone"
     t.string "Email"
     t.string "HouseType"
-    t.integer "HouseNo"
     t.text "complain"
+    t.integer "property_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_12_130011) do
+  create_table "housecomplains", force: :cascade do |t|
+    t.string "Name"
+    t.integer "Phone"
+    t.string "Email"
+    t.string "HouseType"
+    t.text "complain"
+    t.integer "property_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.string "Name"
+    t.integer "amount"
+    t.integer "property_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "properties", force: :cascade do |t|
     t.string "name"
     t.string "property_type"
@@ -39,15 +60,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_12_130011) do
     t.string "location"
     t.string "image"
     t.integer "amount"
-
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  create_table "payments", force: :cascade do |t|
-    t.string "Name"
-    t.integer "HouseNo"
-    t.integer "amount"
 
   create_table "tenants", force: :cascade do |t|
     t.string "name"
@@ -56,7 +71,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_12_130011) do
     t.string "unit_type"
     t.string "date_in"
     t.integer "balance_due"
-
+    t.integer "property_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

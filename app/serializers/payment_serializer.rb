@@ -1,3 +1,3 @@
 class PaymentSerializer < ActiveModel::Serializer
-  attributes :id,:Name,:HouseNo,:amount
+  attributes :id,:Name,:amount,:property_id
 end
