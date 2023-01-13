@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_01_12_150255) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admins", force: :cascade do |t|
     t.string "Name"
     t.string "Email"
@@ -27,16 +30,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_12_150255) do
     t.string "HouseType"
     t.integer "HouseNo"
     t.text "complain"
-    t.integer "property_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "owners", force: :cascade do |t|
-    t.string "Name"
-    t.string "Email"
-    t.integer "Phone"
-    t.string "Password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -45,36 +38,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_12_150255) do
     t.string "Name"
     t.integer "HouseNo"
     t.integer "amount"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "properties", force: :cascade do |t|
-    t.string "Name"
-    t.string "HouseType"
-    t.string "UnitType"
-    t.text "location"
-    t.string "image"
-    t.integer "Amount"
-    t.boolean "wifi"
-    t.boolean "shower"
-    t.boolean "balcony"
-    t.boolean "parking"
-    t.integer "owner_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "tenants", force: :cascade do |t|
-    t.string "Name"
-    t.string "Email"
-    t.integer "Phone"
-    t.string "HouseType"
-    t.string "UnitType"
-    t.integer "property_id"
-    t.integer "owner_id"
-    t.text "Password"
-    t.integer "Amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
