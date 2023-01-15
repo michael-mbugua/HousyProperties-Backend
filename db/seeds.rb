@@ -2,7 +2,7 @@
 puts "Seeding data ..."
 
 # Owner seed data
-owner=Admin.create(Name:"Ellis",Phone:2547,Email:"ellis@gmail.com",Password:"Qr123")
+owner=Admin.create(Name:"Ellis",Phone:2547,Email:"ellis@gmail.com",password:"Qr123")
 # complain seed data
 complain=Housecomplain.create(Name:"Benson",Phone:2543,Email:"phillomen@gmail.com",HouseType:"Condo",complain:"there has been water leakage in my kitchen",property_id:1)
 complain=Housecomplain.create(Name:"valeria",Phone:2543,Email:"phillomen@gmail.com",HouseType:"Condo",complain:"the WIFI has been slow what's happening??!!",property_id:2)
@@ -67,7 +67,6 @@ Property.create([
 Tenant.create([
   {
     name: 'Duncan',
-    house_no: 01,
     phone_no: 2541,
     unit_type: "2 Bedroom",
     date_in: "07/05/2019",
@@ -76,7 +75,6 @@ Tenant.create([
   },
   {
     name: 'Michael',
-    house_no: 02,
     phone_no: 2541,
     unit_type: "4 Bedroom",
     date_in: "27/5/2019",
@@ -85,7 +83,6 @@ Tenant.create([
   },
   {
     name: 'Valeria',
-    house_no: 03,
     phone_no: 25412,
     unit_type: "4 Bedroom",
     date_in: "9/5/2019",
@@ -94,7 +91,6 @@ Tenant.create([
   },
   {
     name: 'Benson',
-    house_no: 04,
     phone_no: 2541,
     unit_type: "5 Bedroom",
     date_in: "17/08/2017",
@@ -103,7 +99,6 @@ Tenant.create([
   },
   {
     name: 'Ashley',
-    house_no: 05,
     phone_no: 2541,
     unit_type: "4 Bedroom",
     date_in: "19/09/2021",
