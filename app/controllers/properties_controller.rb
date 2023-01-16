@@ -21,7 +21,12 @@ class PropertiesController < ApplicationController
           property.destroy
           head :no_content
         end
-    
+        
+        def update
+          property=Property.find(params[:id])
+          property.update()
+          render json: property
+        end
 
         private
 
@@ -30,7 +35,7 @@ class PropertiesController < ApplicationController
         end
       
         def property_params
-          params.permit(:name,:property_type, :unit_type, :location,:image, :amount)
+          params.permit(:propertyName,:property_type, :unit_type, :location,:image, :amount,:wifi,:shower,:parking,:balcony)
         end
 
 end
