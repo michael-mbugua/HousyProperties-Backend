@@ -11,6 +11,9 @@ complain=Housecomplain.create(Name:"James",Phone:2543,Email:"phillomen@gmail.com
 payments=Payment.create(Name:"john",amount:20000,property_id:2)
 payments=Payment.create(Name:"lorem",amount:25000,property_id:3)
 
+# CREATE MESSAGE 
+message=Contact.create(Name:"jeniffer",Email:"lopez@gmail.com",phone:2543245,message:"Are there vaccant rooms to let ?")
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -21,89 +24,105 @@ payments=Payment.create(Name:"lorem",amount:25000,property_id:3)
 
 Property.create([
   {
-    name: 'Lorem ipsum',
+    propertyName: 'Lorem ipsum',
     property_type: "Villa",
     unit_type: "2 Bedroom",
     location: "Kileleshwa",
     image: "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=300",
-    amount: 35000
+    amount: 35000,
+    wifi: true,
+    shower: true,
+    balcony: true,
+    parking: true
   },
   {
-    name: 'Lorem ipsum',
+    propertyName: 'Lorem ipsum',
     property_type: "Apartment",
     unit_type: "3 Bedroom",
     location: "Nairobi",
     image: "https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&w=300",
-    amount: 45000
+    amount: 45000,
+    wifi: true,
+    shower: true,
+    balcony: true,
+    parking: true
   },
   {
-    name: 'Lorem ipsum',
+    propertyName: 'Lorem ipsum',
     property_type: "Family House",
     unit_type: "4 Bedroom",
     location: "Nairobi",
     image: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=300",
-    amount: 55000
+    amount: 55000,
+    wifi: true,
+    shower: true,
+    balcony: true,
+    parking: true
   },
   {
-    name: 'Lorem ipsum',
+    propertyName: 'Lorem ipsum',
     property_type: "Villa",
     unit_type: "4 Bedroom",
     location: "Utawala",
     image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=300",
-    amount: 60000
+    amount: 60000,
+    wifi: true,
+    shower: true,
+    balcony: true,
+    parking: true
   },
   {
-    name: 'Lorem ipsum',
+    propertyName: 'Lorem ipsum',
     property_type: "Apartment",
     unit_type: "2 Bedroom",
     location: "Karen",
     image: "https://images.pexels.com/photos/265004/pexels-photo-265004.jpeg?auto=compress&cs=tinysrgb&w=300",
-    amount: 30000
+    amount: 30000,
+    wifi: true,
+    shower: true,
+    balcony: true,
+    parking: true
+
   }
   
 
 ])
-
 Tenant.create([
   {
     name: 'Duncan',
+    last_name: "lamento",
     phone_no: 2541,
     unit_type: "2 Bedroom",
     date_in: "07/05/2019",
-    balance_due: 14700,
-    property_id: 1
-  },
-  {
-    name: 'Michael',
-    phone_no: 2541,
-    unit_type: "4 Bedroom",
-    date_in: "27/5/2019",
-    balance_due: 1700,
-    property_id: 3
-  },
-  {
-    name: 'Valeria',
-    phone_no: 25412,
-    unit_type: "4 Bedroom",
-    date_in: "9/5/2019",
-    balance_due: 3450,
-    property_id: 2
+    rent_payable: 14700,
+    property_id: 1,
+    email:"lorem@gmail.com",
+    password:"Dun123",
+    HouseType:"family house"
   },
   {
     name: 'Benson',
-    phone_no: 2541,
-    unit_type: "5 Bedroom",
-    date_in: "17/08/2017",
-    balance_due: 44700,
-    property_id: 4
+    last_name: "oduor",
+    phone_no: 2541234,
+    unit_type: "3 Bedroom",
+    date_in: "07/05/2022",
+    rent_payable: 14700,
+    property_id: 3,
+    email:"lorem@gmail.com",
+    password:"ben123",
+    HouseType:"family house"
   },
   {
-    name: 'Ashley',
+    name: 'mike',
+    last_name: "john",
     phone_no: 2541,
-    unit_type: "4 Bedroom",
-    date_in: "19/09/2021",
-    balance_due: 14,
-    property_id: 5
+    unit_type: "2 Bedroom",
+    date_in: "07/05/2019",
+    rent_payable: 14700,
+    property_id: 2,
+    email:"lorem@gmail.com",
+    password:"johnte254",
+    HouseType:"Villa "
   }
 
 ])
