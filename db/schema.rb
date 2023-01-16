@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_13_132946) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_16_085812) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,6 +30,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_13_132946) do
     t.string "HouseType"
     t.text "complain"
     t.integer "property_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "Name"
+    t.string "Email"
+    t.integer "phone"
+    t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,22 +63,29 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_13_132946) do
   end
 
   create_table "properties", force: :cascade do |t|
-    t.string "name"
+    t.string "propertyName"
     t.string "property_type"
     t.string "unit_type"
     t.string "location"
     t.string "image"
     t.integer "amount"
+    t.boolean "wifi"
+    t.boolean "shower"
+    t.boolean "balcony"
+    t.boolean "parking"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "tenants", force: :cascade do |t|
     t.string "name"
+    t.string "last_name"
+    t.string "email"
+    t.string "HouseType"
     t.integer "phone_no"
     t.string "unit_type"
     t.string "date_in"
-    t.integer "balance_due"
+    t.integer "rent_payable"
     t.text "password_digest"
     t.integer "property_id"
     t.datetime "created_at", null: false
