@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
   resources :housecomplains
   resources :admins
   resources :payments
@@ -6,8 +7,8 @@ Rails.application.routes.draw do
   resources :properties do
     resources :tenants, only: [:show,:index]
   end
-  post '/login', to: 'adminauth#create'
-  post '/admin/login',to: 'auth#create'
+  post '/login', to: 'auth#create'
+  post '/admin/login',to:  'adminauth#create'
   get '/profile', to: 'tenants#profile'
 
 
