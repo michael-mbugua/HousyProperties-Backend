@@ -32,7 +32,11 @@ class TenantsController < ApplicationController
           render json: {error: "Failed to create tenant"}, status: :unprocessable_entity
         end
       end
-
+      def update
+        tenant=Tenant.find(params[:id])
+        tenant.update(tenant_params)
+        render json: tenant
+      end
 
       def destroy
         tenant=Tenant.find(params[:id])
@@ -46,9 +50,6 @@ class TenantsController < ApplicationController
       end
     
       def tenant_params
-        params.permit(:name,:password, :phone_no, :unit_type, :date_in,
-          :balance_due,:property_id )
+        params.permit(:name,:last_name, :phone_no,:email,:password,:property_id,:HouseType, :unit_type, :date_in,:rent_payable )
       end
 end
-
-
