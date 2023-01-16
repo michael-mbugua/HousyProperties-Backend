@@ -1,4 +1,5 @@
 class HousecomplainsController < ApplicationController
+    skip_before_action :authorized,only: [:create]
     def index
         complain=Housecomplain.all
         render json: complain
@@ -13,7 +14,7 @@ class HousecomplainsController < ApplicationController
     end
     def update
         complain=Housecomplain.find(params[:id])
-        complain.update(complain_params)
+        complain.update()
         render json: complain
     end
     def destroy
