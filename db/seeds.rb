@@ -2,17 +2,17 @@
 puts "Seeding data ..."
 
 # Owner seed data
-owner=Admin.create(Name:"Ellis",Phone:2547,Email:"ellis@gmail.com",password:"Qr123")
+owner=Admin.create(Name:"Ellis",Phone:254721345678,Email:"ellis@gmail.com",password:"Qr123")
 # complain seed data
-complain=Housecomplain.create(Name:"Benson",Phone:2543,Email:"phillomen@gmail.com",HouseType:"Condo",complain:"there has been water leakage in my kitchen",property_id:1)
-complain=Housecomplain.create(Name:"valeria",Phone:2543,Email:"phillomen@gmail.com",HouseType:"Condo",complain:"the WIFI has been slow what's happening??!!",property_id:2)
-complain=Housecomplain.create(Name:"Duncan",Phone:2543,Email:"phillomen@gmail.com",HouseType:"Condo",complain:"there has been black out since yesterday fix that",property_id:3)
-complain=Housecomplain.create(Name:"James",Phone:2543,Email:"phillomen@gmail.com",HouseType:"Condo",complain:"The house next door plays loud music kindly check that",property_id:4)
-payments=Payment.create(Name:"john",amount:20000,property_id:2)
-payments=Payment.create(Name:"lorem",amount:25000,property_id:3)
+complain=Housecomplain.create(Name:"Benson",Phone:254721345678,Email:"phillomen@gmail.com",HouseType:"Condo",complain:"there has been water leakage in my kitchen",property_id:1)
+complain=Housecomplain.create(Name:"valeria",Phone:254721345678,Email:"phillomen@gmail.com",HouseType:"Condo",complain:"the WIFI has been slow what's happening??!!",property_id:2)
+complain=Housecomplain.create(Name:"Duncan",Phone:254721345678,Email:"phillomen@gmail.com",HouseType:"Condo",complain:"there has been black out since yesterday fix that",property_id:3)
+complain=Housecomplain.create(Name:"James",Phone:254721345678,Email:"phillomen@gmail.com",HouseType:"Condo",complain:"The house next door plays loud music kindly check that",property_id:4)
+payments=Payment.create(Name:"john",amount:20000,property_id:2 ,PhoneNumber:254712345678)
+payments=Payment.create(Name:"lorem",amount:25000,property_id:3,PhoneNumber:254712345678)
 
 # CREATE MESSAGE 
-message=Contact.create(Name:"jeniffer",Email:"lopez@gmail.com",phone:2543245,message:"Are there vaccant rooms to let ?")
+message=Contact.create(Name:"jeniffer",Email:"lopez@gmail.com",phone:254721345678,message:"Are there vaccant rooms to let ?")
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
@@ -91,7 +91,7 @@ Tenant.create([
   {
     name: 'Duncan',
     last_name: "lamento",
-    phone_no: 2541,
+    phone_no: 254721345678,
     unit_type: "2 Bedroom",
     date_in: "07/05/2019",
     rent_payable: 14700,
@@ -103,7 +103,7 @@ Tenant.create([
   {
     name: 'Benson',
     last_name: "oduor",
-    phone_no: 2541234,
+    phone_no: 254721345678,
     unit_type: "3 Bedroom",
     date_in: "07/05/2022",
     rent_payable: 14700,
@@ -115,7 +115,7 @@ Tenant.create([
   {
     name: 'mike',
     last_name: "john",
-    phone_no: 2541,
+    phone_no: 254721345678,
     unit_type: "2 Bedroom",
     date_in: "07/05/2019",
     rent_payable: 14700,

@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_16_085812) do
   create_table "admins", force: :cascade do |t|
     t.string "Name"
     t.string "Email"
-    t.integer "Phone"
+    t.bigint "Phone"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,7 +37,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_16_085812) do
   create_table "contacts", force: :cascade do |t|
     t.string "Name"
     t.string "Email"
-    t.integer "phone"
+    t.bigint "phone"
     t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -45,7 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_16_085812) do
 
   create_table "housecomplains", force: :cascade do |t|
     t.string "Name"
-    t.integer "Phone"
+    t.bigint "Phone"
     t.string "Email"
     t.string "HouseType"
     t.text "complain"
@@ -57,6 +57,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_16_085812) do
   create_table "payments", force: :cascade do |t|
     t.string "Name"
     t.integer "amount"
+    t.bigint "PhoneNumber"
     t.integer "property_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -82,7 +83,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_16_085812) do
     t.string "last_name"
     t.string "email"
     t.string "HouseType"
-    t.integer "phone_no"
+    t.bigint "phone_no"
     t.string "unit_type"
     t.string "date_in"
     t.integer "rent_payable"
