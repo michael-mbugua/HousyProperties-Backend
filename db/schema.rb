@@ -23,17 +23,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_13_132946) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "complains", force: :cascade do |t|
-    t.string "Name"
-    t.integer "Phone"
-    t.string "Email"
-    t.string "HouseType"
-    t.text "complain"
-    t.integer "property_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "housecomplains", force: :cascade do |t|
     t.string "Name"
     t.integer "Phone"

@@ -8,8 +8,8 @@ default: &default
   adapter: postgresql
   encoding: unicode
   host: localhost
-  username: michael_mbugua2
-  password: mikey5440
+  username: ash
+  password: pass123
   pool: 5
 
 development:
@@ -26,3 +26,4 @@ test:
 production:
   <<: *default
   database: housyproperties_API
+  url: <%= ENV["DATABASE_URL"] %>

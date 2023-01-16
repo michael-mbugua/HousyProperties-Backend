@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   post '/login', to: 'adminauth#create'
   post '/admin/login',to: 'auth#create'
   get '/profile', to: 'tenants#profile'
+  
+
 
 
 end
