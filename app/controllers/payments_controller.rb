@@ -1,4 +1,6 @@
 class PaymentsController < ApplicationController
+    skip_before_action :authorized,only: [:create,:index]
+
     def create
         pay=Payment.create(pay_params)
         render json: pay, status: :created
