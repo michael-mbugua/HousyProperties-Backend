@@ -3,6 +3,7 @@ class CreatePayments < ActiveRecord::Migration[7.0]
     create_table :payments do |t|
       t.string :Name
       t.integer :amount
+      t.integer :PhoneNumber ,:limit => 8
       t.integer :property_id
 
       t.timestamps

@@ -15,6 +15,6 @@ class PaymentsController < ApplicationController
     end
     private
     def pay_params
-        params.permit(:Name,:amount,:property_id)
+        params.permit(:Name,:amount,:property_id,:PhoneNumber)
     end
 end

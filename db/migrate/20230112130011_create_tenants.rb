@@ -5,7 +5,7 @@ class CreateTenants < ActiveRecord::Migration[7.0]
       t.string :last_name
       t.string :email 
       t.string :HouseType
-      t.integer :phone_no
+      t.integer :phone_no ,:limit => 8
       t.string :unit_type
       t.string :date_in
       t.integer :rent_payable
