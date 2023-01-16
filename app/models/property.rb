@@ -1,6 +1,6 @@
 class Property < ApplicationRecord
     ##validation
-    validates :name, :property_type, :unit_type, :location, :image, :amount, presence: true
+    validates :propertyName,:property_type, :unit_type, :location,:image, :amount,:wifi,:shower,:parking,:balcony, presence: true
     has_many :tenants
     has_many :housecomplains
     has_many :payments
