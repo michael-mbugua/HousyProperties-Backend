@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post '/login', to: 'auth#create'
   post '/admin/login',to:  'adminauth#create'
   get '/profile', to: 'tenants#profile'
+  post '/property_search',to: 'properties#search'
 
 
 end
