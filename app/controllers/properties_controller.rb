@@ -1,6 +1,6 @@
 class PropertiesController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-    skip_before_action :authorized,only: [:index,:search,:create]
+    skip_before_action :authorized,only: [:index,:search,:create,:delete]
       def index
           properties = Property.all
           render json: properties
