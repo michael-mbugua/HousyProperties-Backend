@@ -14,6 +14,6 @@ class AdminauthController < ApplicationController
 
     private
     def admin_login_params
-        params.permit(:name,:password)
+        params.permit(:Name,:password)
     end
 end

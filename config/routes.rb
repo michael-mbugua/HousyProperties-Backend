@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :properties do
     resources :tenants, only: [:show,:index]
   end
-  post '/login', to: 'auth#create'
+  post '/tenants/login', to: 'auth#create'
   post '/admin/login',to:  'adminauth#create'
   get '/profile', to: 'tenants#profile'
   post '/property_search',to: 'properties#search'
