@@ -1,5 +1,5 @@
 class HousecomplainsController < ApplicationController
-    skip_before_action :authorized,only: [:create]
+    skip_before_action :authorized,only: [:create,:index,:delete,:update]
     def index
         complain=Housecomplain.all
         render json: complain
